@@ -28,7 +28,7 @@ let me = {
     superPowers: ['oatmilling', 'microwaving', 'creaming'],
     superPowerXP: function() {Math.floor(Math.random() * 100) + 1},
     profileImage: function(){
-        return 
+        return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`
     }
      
 
@@ -48,13 +48,13 @@ let homeTown = me.homeTown
 // Next, create a for loop to loop over the array. If any of the colors you chose is 'blue', change it's value to '#4D4DFF' which is just a more appealing color of blue. Outside of the for loop but still inside of setColor, invoke the function called background which will take in three arguments. These arguments should be each item of your array. This is a function we created for you to set the background colors.
 
 function setColor(arr) {
-    arr.splice(0, 3)
+    arr.splice(3)
     for (let i = 0; i < arr.length; i++) {
         if (faveColors[i] == 'blue') {
             faveColors[i] = '#4D4DFF'
         }
     }
-    background(faveColors)
+    background(faveColors[0, 1, 2])
 }
 
 
